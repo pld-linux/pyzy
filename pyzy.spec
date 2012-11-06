@@ -1,7 +1,7 @@
 Summary:	The Chinese PinYin and Bopomofo conversion library
 Name:		pyzy
 Version:	0.1.0
-Release:	1
+Release:	2
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://pyzy.googlecode.com/files/%{name}-%{version}.tar.gz
@@ -43,6 +43,7 @@ The pyzy-devel package contains the header files for pyzy.
 %package db-open-phrase
 Summary:	The open phrase database for pyzy
 Group:		Libraries
+Obsoletes:	ibus-pinyin-db-open-phrase < 1.4.99
 Provides:	%{name}-db
 Requires:	%{name}-common = %{version}-%{release}
 BuildArch:	noarch
@@ -53,6 +54,7 @@ The phrase database for pyzy from open-phrase project.
 %package db-android
 Summary:	The android phrase database for pyzy
 Group:		Libraries
+Obsoletes:	ibus-pinyin-db-android < 1.4.99
 Provides:	%{name}-db
 Requires:	%{name}-common = %{version}-%{release}
 BuildArch:	noarch
