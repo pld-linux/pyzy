@@ -1,7 +1,7 @@
 Summary:	The Chinese PinYin and Bopomofo conversion library
 Name:		pyzy
 Version:	0.1.0
-Release:	0.1
+Release:	1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://pyzy.googlecode.com/files/%{name}-%{version}.tar.gz
