@@ -14,7 +14,7 @@ Source0:	http://pyzy.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	73afc3c20808af2fee5f9fca47c64630
 Source1:	http://pyzy.googlecode.com/files/%{name}-database-1.0.0.tar.bz2
 # Source1-md5:	d0951b8daa7f56a2cbd3b6b4e42532e0
-URL:		http://code.google.com/p/pyzy
+URL:		https://github.com/pyzy/pyzy
 BuildRequires:	boost-devel >= 1.39
 BuildRequires:	glib2-devel >= 1:2.24.0
 BuildRequires:	libstdc++-devel
@@ -36,7 +36,7 @@ Biblioteka konwersji pisma chińskiego PinYin i Bopomofo.
 Summary:	Common files for pyzy and phrase databases
 Summary(pl.UTF-8):	Pliki wspólne dla pyzy i baz danych fraz
 Group:		Libraries
-%if "%{_rpmversion}" >= "5"
+%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
 %endif
 
@@ -79,7 +79,7 @@ Group:		Libraries
 Requires:	%{name}-common = %{version}-%{release}
 Provides:	%{name}-db = %{version}-%{release}
 Obsoletes:	ibus-pinyin-db-open-phrase < 1.4.99
-%if "%{_rpmversion}" >= "5"
+%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
 %endif
 
@@ -96,7 +96,7 @@ Group:		Libraries
 Requires:	%{name}-common = %{version}-%{release}
 Provides:	%{name}-db = %{version}-%{release}
 Obsoletes:	ibus-pinyin-db-android < 1.4.99
-%if "%{_rpmversion}" >= "5"
+%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
 %endif
 
