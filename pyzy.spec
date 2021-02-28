@@ -43,9 +43,7 @@ Biblioteka konwersji pisma chińskiego PinYin i Bopomofo.
 Summary:	Common files for pyzy and phrase databases
 Summary(pl.UTF-8):	Pliki wspólne dla pyzy i baz danych fraz
 Group:		Libraries
-%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
-%endif
 
 %description common
 Common files for pyzy and phrase databases.
@@ -86,9 +84,7 @@ Group:		Libraries
 Requires:	%{name}-common = %{version}-%{release}
 Provides:	%{name}-db = %{version}-%{release}
 Obsoletes:	ibus-pinyin-db-open-phrase < 1.4.99
-%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
-%endif
 
 %description db-open-phrase
 The phrase database for pyzy from open-phrase project.
@@ -103,9 +99,7 @@ Group:		Libraries
 Requires:	%{name}-common = %{version}-%{release}
 Provides:	%{name}-db = %{version}-%{release}
 Obsoletes:	ibus-pinyin-db-android < 1.4.99
-%if "%{_rpmversion}" >= "4.6"
 BuildArch:	noarch
-%endif
 
 %description db-android
 The phrase database for pyzy from android project.
