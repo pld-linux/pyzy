@@ -5,20 +5,18 @@
 Summary:	The Chinese PinYin and Bopomofo conversion library
 Summary(pl.UTF-8):	Biblioteka konwersji pisma chińskiego PinYin i Bopomofo
 Name:		pyzy
-Version:	0.1.0
-Release:	4
+Version:	1.1
+Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-#Source0Download: http://code.google.com/p/pyzy/downloads/list
-Source0:	http://pyzy.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	73afc3c20808af2fee5f9fca47c64630
+#Source0Download: https://github.com/openSUSE/pyzy/releases
+Source0:	https://github.com/openSUSE/pyzy/archive/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	266a2d22e63b2df102b5f9f45d86d37f
 Source1:	http://pyzy.googlecode.com/files/%{name}-database-1.0.0.tar.bz2
 # Source1-md5:	d0951b8daa7f56a2cbd3b6b4e42532e0
 Source2:	https://raw.githubusercontent.com/tsuna/boost.m4/3d67ee84e9149f6279a8df2113f5a86f0a83bd0d/build-aux/boost.m4
 # Source2-md5:	86092bd75ae3e9109891646b21cc433e
-# https://github.com/hillwoodroc/pyzy/commit/344872231b95ce7c2808288101cc563dcd011940.patch
-Patch0:		%{name}-opencc-1.patch
-URL:		https://github.com/pyzy/pyzy
+URL:		https://github.com/openSUSE/pyzy
 BuildRequires:	autoconf >= 2.62
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	boost-devel >= 1.39
@@ -28,6 +26,7 @@ BuildRequires:	libtool >= 2:1.5
 BuildRequires:	libuuid-devel
 BuildRequires:	opencc-devel >= 1.0.2
 BuildRequires:	pkgconfig
+BuildRequires:	python3 >= 1:3
 BuildRequires:	sqlite3-devel
 Requires:	glib2 >= 1:2.24.0
 Suggests:	%{name}-db = %{version}-%{release}
@@ -109,12 +108,11 @@ Baza danych fraz dla pyzy pochodząca z projektu android.
 
 %prep
 %setup -q
-%patch0 -p1
 
-cp -f %{SOURCE1} data/db/open-phrase
+cp -pf %{SOURCE1} data/db/open-phrase
 
 # update to support newer compilers
-cp -f %{SOURCE2} m4/boost.m4
+cp -pf %{SOURCE2} m4/boost.m4
 
 %build
 %{__libtoolize}
